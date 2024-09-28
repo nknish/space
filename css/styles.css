@@ -12,7 +12,6 @@ header {
 }
 
 #planet-display {
-  width: 80%;
   margin-left: 10%;
   margin-right: 10%;
 }
@@ -44,6 +43,10 @@ img {
   line-height: 5rem;
 }
 
+#help-button:hover {
+  background-color: rgb(66, 26, 87);
+}
+
 #back-button {
   color: #fff;
   font-size: 2rem;
@@ -57,4 +60,8 @@ img {
   text-align: center;
   vertical-align: middle;
   line-height: 5rem;
+}
+
+#back-button:hover {
+  background-color: rgb(66, 26, 87);
 }
