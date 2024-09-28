@@ -1,0 +1,11 @@
+.orbit {
+  fill: none;
+  stroke: gray;
+  stroke-width: 1;
+  stroke-dasharray: 4px;
+}
+
+#planets {
+  max-width: 100px;
+  max-height: 100px;
+}
