@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 let aVals = [7.60920495189872, 10.392304845413264, 12.24744871391589, 15.0996688705415, 27.910571473905726, 37.815340802378074, 53.5723809439155, 67.08203932499369];
 let bVals = [7.527967853278865, 10.392179752102058, 12.24656278308326, 15.06620390144777, 27.89380397149159, 22.093322520616947, 53.54401553862019, 67.08000968992178];
+let kVals = [26.08797865515552, 10.216561475088758, 6.283185307179586, 3.3403430660178555, 0.5297795368616852, 0.21327852366529484, 0.0747909214043517, 0.03812612443676933, 0.02532521284635061];
 
 ellipses();
 
@@ -53,7 +54,7 @@ function position(planetName, time) {
 }
 
 function ellipses() {
-	let names = ["mercury-o","venus-o ","earth-o","mars-o","jupiter-o","saturn-o","unanus-o","neptune-o"]
+	let names = ["mercury-o","venus-o","earth-o","mars-o","jupiter-o","saturn-o","unanus-o","neptune-o"]
 	for(let i = 0; i < 8; i++) {
 		ellipse(names[i], i);
 	}
