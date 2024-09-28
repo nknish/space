@@ -1,3 +1,22 @@
+html {
+  background-color: navy;
+}
+
+header {
+  height: 8rem;
+  padding: 0rem;
+  text-align: center;
+  color: white;
+  font-size: 6rem;
+  padding: 10px;
+}
+
+#planet-display {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
 .orbit {
   fill: none;
   stroke: gray;
@@ -5,7 +24,37 @@
   stroke-dasharray: 4px;
 }
 
-#planets {
+img {
   max-width: 100px;
   max-height: 100px;
+}
+
+#help-button {
+  color: #fff;
+  font-size: 2rem;
+  position: fixed;
+  width: 5rem;
+  height: 5rem;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: rgb(46, 6, 67);
+  border-radius: 5rem;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 5rem;
+}
+
+#back-button {
+  color: #fff;
+  font-size: 2rem;
+  position: fixed;
+  width: 5rem;
+  height: 5rem;
+  bottom: 2rem;
+  left: 2rem;
+  background-color: rgb(46, 6, 67);
+  border-radius: 5rem;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 5rem;
 }
