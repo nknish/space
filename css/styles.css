@@ -16,19 +16,6 @@ main {
   padding-right: 8%;
 }
 
-svg {
-  position: absolute;
-  top: 300px;
-  left: 300px;
-}
-
-ellipse {
-  fill: none;
-  stroke: gray;
-  stroke-width: 1;
-  stroke-dasharray: 4px;
-}
-
 img {
   max-width: 100px;
   max-height: 100px;
