@@ -17,7 +17,7 @@ header {
   margin-right: 10%;
 }
 
-.orbit {
+ellipse {
   fill: none;
   stroke: gray;
   stroke-width: 1;
