@@ -40,9 +40,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const canvas = document.getElementById("canvas");
   const ctx = canvas.getContext("2d");
 
+  const windowW = window.innerWidth;
+  const windowH = window.innerHeight;
+
+  canvas.width = "" + windowW;
+  canvas.height = "" + windowH * 0.6;
+
   const height = canvas.height;
   const width = canvas.width;
-  const pSize = 40;
+  const pSize = 36;
 
   ellipse();
   findPositions();
