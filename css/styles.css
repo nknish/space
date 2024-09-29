@@ -11,6 +11,10 @@ header {
   padding: 0px;
 }
 
+body {
+  background-image: url("space-image\ copy.jpeg");
+}
+
 main {
   padding-left: 0%;
   padding-right: 0%;
