@@ -6,6 +6,18 @@ JS File
 //var bVals = [56.6703, 107.9974, 149.9783, 226.9905, 778.0643, 488.1149, 2866.9616, 4499.7277];
 
 document.addEventListener("DOMContentLoaded", function () {
+  render();
+});
+
+window.addEventListener(
+  "resize",
+  function (event) {
+    render();
+  },
+  true
+);
+
+function render() {
   const aVals = [
     7.60920495189872, 10.392304845413264, 12.24744871391589, 15.0996688705415,
     27.910571473905726, 37.7888872554, 53.5723809439155, 67.08203932499369,
@@ -19,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const kVals = [
     26.08797865515552, 10.216561475088758, 6.283185307179586,
     3.3403430660178555, 0.5297795368616852, 0.21327852366529484,
-    0.0747909214043517, 0.03812612443676933, 0.02532521284635061,
+    0.0747909214043517, 0.03812612443676933,
   ];
   const thetaVals = [
     3.157300616857742, 4.576253298729132, 0.1117010721276371,
@@ -36,6 +48,11 @@ document.addEventListener("DOMContentLoaded", function () {
     "uranus",
     "neptune",
   ];
+  const oneDay = 24 * 60 * 60 * 1000;
+  const seedDay = new Date(2024, 9, 29);
+  const today = new Date(2024, 12, 26);
+  //   const today = new Date(2029, 9, 2); // Set test value
+  const time = (today - seedDay) / oneDay / 365.24;
 
   const canvas = document.getElementById("canvas");
   const ctx = canvas.getContext("2d");
@@ -43,37 +60,15 @@ document.addEventListener("DOMContentLoaded", function () {
   const windowW = window.innerWidth;
   const windowH = window.innerHeight;
 
-  canvas.width = "" + windowW;
-  canvas.height = "" + windowH * 0.6;
+  canvas.width = "" + windowW * 0.9;
+  canvas.height = "" + windowH * 0.55;
 
   const height = canvas.height;
   const width = canvas.width;
-  const pSize = 36;
+  const pSize = 34;
 
   ellipse();
   findPositions();
-
-  function getIndx(planetName) {
-    let x = -1;
-    if (planetName === "mercury") {
-      x = 0;
-    } else if (planetName === "venus") {
-      x = 1;
-    } else if (planetName === "earth") {
-      x = 2;
-    } else if (planetName === "mars") {
-      x = 3;
-    } else if (planetName === "jupiter") {
-      x = 4;
-    } else if (planetName === "saturn") {
-      x = 5;
-    } else if (planetName === "uranus") {
-      x = 6;
-    } else if (planetName === "neptune") {
-      x = 7;
-    }
-    return x;
-  }
 
   function ellipse() {
     for (let i = 0; i < aVals.length; i++) {
@@ -90,21 +85,20 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function findPositions() {
-    for (let i = 0; i < 8; i++) {
-      position(names[i], 0);
-    }
     drawSun();
+    for (let i = 0; i < 8; i++) {
+      position(i);
+    }
   }
 
-  function position(planetName, time) {
-    let t = time;
-    let indx = getIndx(planetName);
-    let a = aVals[indx] / 2;
-    let b = bVals[indx] / 2;
-    let k = kVals[indx];
-    let theta = thetaVals[indx];
-    let x = a * Math.cos(k * t + theta);
-    let y = b * Math.sin(k * t + theta);
+  function position(index) {
+    let planetName = names[index];
+    let a = aVals[index] / 2;
+    let b = bVals[index] / 2;
+    let k = kVals[index];
+    let theta = thetaVals[index];
+    let x = a * Math.cos(k * time + theta);
+    let y = b * Math.sin(k * time + theta);
 
     x = canvas.width / 2 + (x * canvas.width) / scale;
     y = canvas.height / 2 - (y * canvas.height) / scale;
@@ -133,4 +127,4 @@ document.addEventListener("DOMContentLoaded", function () {
       ctx.drawImage(sunImage, x, y, pSize * 2, pSize * 2);
     };
   }
-});
+}
