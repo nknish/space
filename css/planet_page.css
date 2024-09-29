@@ -1,25 +1,24 @@
 #tags {
+  width: 200px;
+  height: 30px;
+  border: 2px solid grey;
+  border-radius: 10px;
+}
 
-    width:200px;
-    height:30px;
-    border: 2px solid grey;
-    border-radius: 10px;
-  }
-  
-  #tags:focus {
-       outline: 0;
-       border: 2px solid #109cdf;
-  }
+#tags:focus {
+  outline: 0;
+  border: 2px solid #109cdf;
+}
 
-  #row {
-     background-color: rgb(234, 17, 17);
-  }
-  
-  body {
+#row {
+  background-color: rgb(234, 17, 17);
+}
+
+body {
   background-image: url("space-image\ copy.jpeg");
 }
-  
-  #back-button {
+
+#back-button {
   color: #fff;
   font-size: 2rem;
   position: fixed;
@@ -55,4 +54,12 @@
 
 #help-button:hover {
   background-color: rgb(66, 26, 87);
+}
+
+#about-info {
+  margin: 50px;
+  padding: 20px;
+  border-radius: 10px;
+  color: #fff;
+  background-color: rgb(102, 67, 184);
 }
