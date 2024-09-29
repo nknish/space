@@ -6,6 +6,18 @@ JS File
 //var bVals = [56.6703, 107.9974, 149.9783, 226.9905, 778.0643, 488.1149, 2866.9616, 4499.7277];
 
 document.addEventListener("DOMContentLoaded", function () {
+  render();
+});
+
+window.addEventListener(
+  "resize",
+  function (event) {
+    render();
+  },
+  true
+);
+
+function render() {
   const aVals = [
     7.60920495189872, 10.392304845413264, 12.24744871391589, 15.0996688705415,
     27.910571473905726, 37.7888872554, 53.5723809439155, 67.08203932499369,
@@ -133,4 +145,4 @@ document.addEventListener("DOMContentLoaded", function () {
       ctx.drawImage(sunImage, x, y, pSize * 2, pSize * 2);
     };
   }
-});
+}
