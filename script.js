@@ -17,6 +17,14 @@ window.addEventListener(
   true
 );
 
+window.onmousedown = () => {
+  render();
+};
+
+window.onmouseup = () => {
+  render();
+};
+
 function render() {
   const aVals = [
     7.60920495189872, 10.392304845413264, 12.24744871391589, 15.0996688705415,
@@ -38,6 +46,11 @@ function render() {
     1.0873401239924672, 1.2234758056480248, 6.05105651666434,
     0.9546951008408984, -0.024434609527920613,
   ];
+
+  const sliderTimes = [
+    0, 0.002737907, 0.019165349049, 0.08213721021, 0.5, 1, 10, 100,
+  ];
+
   const names = [
     "mercury",
     "venus",
@@ -48,11 +61,16 @@ function render() {
     "uranus",
     "neptune",
   ];
+
+  const sVal = document.getElementById("timeline-slider").value;
+
   const oneDay = 24 * 60 * 60 * 1000;
   const seedDay = new Date(2024, 9, 29);
-  const today = new Date(2024, 12, 26);
+  const today = new Date();
   //   const today = new Date(2029, 9, 2); // Set test value
-  const time = (today - seedDay) / oneDay / 365.24;
+  const timeToday = (today - seedDay) / oneDay / 365.2425;
+  const offset = sVal < 0 ? -1 * sliderTimes[-1 * sVal] : sliderTimes[sVal];
+  const time = timeToday + offset;
 
   const canvas = document.getElementById("canvas");
   const ctx = canvas.getContext("2d");
