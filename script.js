@@ -63,9 +63,12 @@ function render() {
   ];
 
   const sVal = document.getElementById("timeline-slider").value;
-
   const oneDay = 24 * 60 * 60 * 1000;
-  const seedDay = new Date(2024, 9, 29);
+
+  //for SOME REASON months are indexed starting at 0. days aren't. we h8 javascript
+  const seedDay = new Date(2024, 8, 29);
+  // comment of shame
+
   const today = new Date();
   const timeToday = (today - seedDay) / oneDay / 365.2425;
   const offset = sVal < 0 ? -1 * sliderTimes[-1 * sVal] : sliderTimes[sVal];
@@ -89,6 +92,7 @@ function render() {
     drawPlanet(i);
   }
   drawSun();
+  updateHeader();
 
   function drawEllipses() {
     for (let i = 0; i < aVals.length; i++) {
@@ -139,5 +143,33 @@ function render() {
     sunImage.onload = function () {
       ctx.drawImage(sunImage, x, y, pSize * 2, pSize * 2);
     };
+  }
+
+  function updateHeader() {
+    const header = document.getElementById("noah");
+    const futureLabels = [
+      "Today",
+      "Tomorrow",
+      "1 Week From Now",
+      "1 Month From Now",
+      "6 Months From Now",
+      "1 Year From Now",
+      "10 Years From Now",
+      "100 Years From Now",
+    ];
+    const pastLabels = [
+      "Today",
+      "Yesterday",
+      "1 Week Ago",
+      "1 Month Ago",
+      "6 Months Ago",
+      "1 Year Ago",
+      "10 Years Ago",
+      "100 Years Ago",
+    ];
+
+    let headerString = sVal < 0 ? pastLabels[sVal * -1] : futureLabels[sVal];
+
+    header.textContent = "Our Solar System " + headerString;
   }
 }
