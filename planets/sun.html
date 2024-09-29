@@ -1,67 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-<style>
+  <style>
     .column {
-        float: left;
-        width: 33.3%;
-        height: 200px;
+      float: left;
+      width: 33.3%;
+      height: 200px;
     }
 
     .row:after {
-        content: "";
-        display: table;
-        clear: both;
+      content: "";
+      display: table;
+      clear: both;
     }
 
-    .border{
-        border-width: 3px;
-        border-style:solid;
-        border-color: darkgreen;
-        border-radius: 20px;
+    .border {
+      border-width: 3px;
+      border-style: solid;
+      border-color: rgb(222, 113, 45);
+      border-radius: 20px;
     }
 
-    .rotate-image{
-        transform:rotate(45deg);
-        margin-top: 100px;
+    .rotate-image {
+      transform: rotate(45deg);
+      margin-top: 100px;
     }
-</style>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-	<link rel="stylesheet" href="../css/planet_page.css" />
-</head>
+    img {
+      margin-left: 30px;
+    }
+  </style>
 
-<body style = "background-image: url('space.png');">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>THE SUN</title>
+    <link rel="stylesheet" href="../css/planet_page.css" />
+  </head>
+
+  <body style="background-image: url('space.png')">
     <header>
-        <h1 align="center" style="background-color: forestgreen;" class="border">MOTHER EARTH</h1>
-        
+      <h1
+        align="center"
+        style="background-color: rgb(222, 113, 45)"
+        class="border"
+      >
+        THE SUN
+      </h1>
     </header>
 
     <div class="row">
-        <div class="column left">
-            <h2 align="center" style="background-color: forestgreen;" class="border" >INFORMATION<p><br>Did you know you are on EARTH right now?!<br><br>Moons: She has 1 moon <br><br> Rings: Sadly, Our mother earth is single and ringless<br> </p>
-            </h2>
-        </div>
+      <div class="column left">
+        <h2
+          align="center"
+          style="background-color: rgb(222, 113, 45)"
+          class="border"
+        >
+          INFORMATION
+          <p>
+            <br />The sun is about 330,000 times as massive as Earth<br /><br />All
+            of the planets in the solar system orbit around the sun<br /><br />
+            The surface of the sun is about 10,000 degrees!<br />
+          </p>
+        </h2>
+      </div>
 
-        <div class="column center">
-            <h2></h2>
-           <img src="moving_sun.gif" alt="Sun" class="center" width="400" height="400" alt="Moving Sun" class="rotate-image">
-        </div> 
+      <div class="column center">
+        <h2></h2>
+        <img
+          src="moving_sun.gif"
+          alt="Sun"
+          class="center"
+          width="400"
+          height="400"
+          alt="Moving Sun"
+          class="rotate-image"
+        />
+      </div>
 
-        <div class="column right">
-            <h2 align="center" style="background-color: forestgreen;" class="border">FUN FACTS<p>The earth is not a perfect sphere <br>
-                It might have once been purple due to ancient microbes <br>
-                The driest place on Earth is the Atacama Desert<br>
-                Earth is radioactive <br>
-                The planet is much older than humans <br>
-                The Earth's magnetic field protects us from solar wind
-                teh Earth's rotation is changing speed</p></h2> 
-        </div>
+      <div class="column right">
+        <h2
+          align="center"
+          style="background-color: rgb(222, 113, 45)"
+          class="border"
+        >
+          FUN FACTS
+          <p>
+            The sun is the closest star to us<br /><br />
+            The sun is 4.5 billion years old<br />
+            All plants and animals on Earth get their energy from the sun<br />
+            The sun is the reason all the planets orbit around and stay nearby
+            each other <br />
+            Light from the sun takes 8 minutes to get to Earth <br />
+          </p>
+        </h2>
+      </div>
     </div>
 
     <a href="../index.html" id="back-button">←</a>
-</body>
-
+  </body>
 </html>
