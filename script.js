@@ -67,7 +67,6 @@ function render() {
   const oneDay = 24 * 60 * 60 * 1000;
   const seedDay = new Date(2024, 9, 29);
   const today = new Date();
-  //   const today = new Date(2029, 9, 2); // Set test value
   const timeToday = (today - seedDay) / oneDay / 365.2425;
   const offset = sVal < 0 ? -1 * sliderTimes[-1 * sVal] : sliderTimes[sVal];
   const time = timeToday + offset;
@@ -85,10 +84,13 @@ function render() {
   const width = canvas.width;
   const pSize = 34;
 
-  ellipse();
-  findPositions();
+  drawEllipses();
+  for (let i = 0; i < 8; i++) {
+    drawPlanet(i);
+  }
+  drawSun();
 
-  function ellipse() {
+  function drawEllipses() {
     for (let i = 0; i < aVals.length; i++) {
       ctx.beginPath();
       let radiusx = (width * aVals[i]) / scale / 2;
@@ -102,14 +104,7 @@ function render() {
     ctx.globalAlpha = 1;
   }
 
-  function findPositions() {
-    drawSun();
-    for (let i = 0; i < 8; i++) {
-      position(i);
-    }
-  }
-
-  function position(index) {
+  function drawPlanet(index) {
     let planetName = names[index];
     let a = aVals[index] / 2;
     let b = bVals[index] / 2;
