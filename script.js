@@ -48,6 +48,11 @@ function render() {
     "uranus",
     "neptune",
   ];
+  const oneDay = 24 * 60 * 60 * 1000;
+  const seedDay = new Date(2024, 9, 29);
+  const today = new Date(2024, 12, 26);
+  //   const today = new Date(2029, 9, 2); // Set test value
+  const time = (today - seedDay) / oneDay / 365.24;
 
   const canvas = document.getElementById("canvas");
   const ctx = canvas.getContext("2d");
@@ -55,37 +60,15 @@ function render() {
   const windowW = window.innerWidth;
   const windowH = window.innerHeight;
 
-  canvas.width = "" + windowW;
-  canvas.height = "" + windowH * 0.6;
+  canvas.width = "" + windowW * 0.9;
+  canvas.height = "" + windowH * 0.55;
 
   const height = canvas.height;
   const width = canvas.width;
-  const pSize = 36;
+  const pSize = 34;
 
   ellipse();
   findPositions();
-
-  function getIndx(planetName) {
-    let x = -1;
-    if (planetName === "mercury") {
-      x = 0;
-    } else if (planetName === "venus") {
-      x = 1;
-    } else if (planetName === "earth") {
-      x = 2;
-    } else if (planetName === "mars") {
-      x = 3;
-    } else if (planetName === "jupiter") {
-      x = 4;
-    } else if (planetName === "saturn") {
-      x = 5;
-    } else if (planetName === "uranus") {
-      x = 6;
-    } else if (planetName === "neptune") {
-      x = 7;
-    }
-    return x;
-  }
 
   function ellipse() {
     for (let i = 0; i < aVals.length; i++) {
@@ -102,21 +85,20 @@ function render() {
   }
 
   function findPositions() {
-    for (let i = 0; i < 8; i++) {
-      position(names[i], 0);
-    }
     drawSun();
+    for (let i = 0; i < 8; i++) {
+      position(i);
+    }
   }
 
-  function position(planetName, time) {
-    let t = time;
-    let indx = getIndx(planetName);
-    let a = aVals[indx] / 2;
-    let b = bVals[indx] / 2;
-    let k = kVals[indx];
-    let theta = thetaVals[indx];
-    let x = a * Math.cos(k * t + theta);
-    let y = b * Math.sin(k * t + theta);
+  function position(index) {
+    let planetName = names[index];
+    let a = aVals[index] / 2;
+    let b = bVals[index] / 2;
+    let k = kVals[index];
+    let theta = thetaVals[index];
+    let x = a * Math.cos(k * time + theta);
+    let y = b * Math.sin(k * time + theta);
 
     x = canvas.width / 2 + (x * canvas.width) / scale;
     y = canvas.height / 2 - (y * canvas.height) / scale;
