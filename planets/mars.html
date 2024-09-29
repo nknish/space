@@ -1,67 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<style>
+  <style>
     .column {
-        float: left;
-        width: 33.3%;
-        height: 200px;
+      float: left;
+      width: 33.3%;
+      height: 200px;
     }
 
     .row:after {
-        content: "";
-        display: table;
-        clear: both;
+      content: "";
+      display: table;
+      clear: both;
     }
 
-    .border{
-        border-width: 3px;
-        border-style:solid;
-        border-color: rgb(172, 81, 10);
-        border-radius: 20px;
+    .border {
+      border-width: 3px;
+      border-style: solid;
+      border-color: rgb(172, 81, 10);
+      border-radius: 20px;
     }
 
-    .rotate-image{
-        transform:rotate(45deg);
-        margin-top: 100px;
+    .rotate-image {
+      transform: rotate(45deg);
+      margin-top: 100px;
     }
-</style>
+  </style>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MARS</title>
-	<link rel="stylesheet" href="../css/planet_page.css" />
-</head>
+    <link rel="stylesheet" href="../css/planet_page.css" />
+  </head>
 
-<body style = "background-image: url('space.png');">
+  <body style="background-image: url('space.png')">
     <header>
-        <h1 align="center" style="background-color: rgb(172, 81, 10);" class="border">MARS</h1>
-        
+      <h1
+        align="center"
+        style="background-color: rgb(172, 81, 10)"
+        class="border"
+      >
+        MARS
+      </h1>
     </header>
 
-	<div id="buttons">
-          <a></a>
+    <div id="buttons">
+      <a></a>
     </div>
-		
+
     <div class="row">
-        <div class="column left">
-            <h2 align="center" style="background-color: rgb(172, 81, 10);" class="border" >INFORMATION<p>You are not born in MARS, Only if you're and alien. SHHH your secret is safe with me!<br>Moons: She has 2 moons<br>Rings: Part of the single ladies... Ringless<br> Location: 4th planet away from the sun </p>
-            </h2>
-            </div>
+      <div class="column left">
+        <h2
+          align="center"
+          style="background-color: rgb(172, 81, 10)"
+          class="border"
+        >
+          INFORMATION
+          <p>
+            You are not born in MARS, Only if you're and alien. SHHH your secret
+            is safe with me!<br />Moons: She has 2 moons<br />Rings: Part of the
+            single ladies... Ringless<br />
+            Location: 4th planet away from the sun
+          </p>
+        </h2>
+      </div>
 
-        <div class="column center">
-            <h2></h2>
-           <img src="moving_mars.gif" alt="Mars" class="center" width="400" height="400" alt="Rotating Mars" class="rotate-image">
-        </div> 
+      <div class="column center">
+        <h2></h2>
+        <img
+          src="moving_mars.gif"
+          alt="Mars"
+          class="center"
+          width="400"
+          height="400"
+          alt="Rotating Mars"
+          class="rotate-image"
+        />
+      </div>
 
-        <div class="column right">
-            <h2 align="center" style="background-color: rgb(172, 81, 10);" class="border">FUN FACTS<p> MARS is named after the god of WAR<br> Half the size of earth <br> It is 678 Earth days per year<br> There are robots on Mars...beep boop! <br>
-                </p></h2> 
-        </div>
+      <div class="column right">
+        <h2
+          align="center"
+          style="background-color: rgb(172, 81, 10)"
+          class="border"
+        >
+          FUN FACTS
+          <p>
+            MARS is named after the god of WAR<br />
+            Half the size of earth <br />
+            It is 678 Earth days per year<br />
+            There are robots on Mars...beep boop! <br />
+          </p>
+        </h2>
+      </div>
     </div>
 
-    <a id="help-button">?</a>
     <a href="../index.html" id="back-button">←</a>
-</body>
-
+  </body>
 </html>

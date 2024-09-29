@@ -1,69 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
-<style>
+  <style>
     .column {
-        float: left;
-        width: 33.3%;
-        height: 200px;
+      float: left;
+      width: 33.3%;
+      height: 200px;
     }
 
     .row:after {
-        content: "";
-        display: table;
-        clear: both;
+      content: "";
+      display: table;
+      clear: both;
     }
 
-    .border{
-        border-width: 3px;
-        border-style:solid;
-        border-color: rgb(53, 33, 9);
-        border-radius: 20px;
+    .border {
+      border-width: 3px;
+      border-style: solid;
+      border-color: rgb(53, 33, 9);
+      border-radius: 20px;
     }
 
-    .rotate-image{
-        transform:rotate(45deg);
-        margin-top: 100px;
+    .rotate-image {
+      transform: rotate(45deg);
+      margin-top: 100px;
     }
-</style>
+  </style>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JUPITER</title>
-	<link rel="stylesheet" href="../css/planet_page.css" />
-</head>
+    <link rel="stylesheet" href="../css/planet_page.css" />
+  </head>
 
-<body style = "background-image: url('space.png');">
+  <body style="background-image: url('space.png')">
     <header>
-        <h1 align="center" style="background-color: rgb(173, 138, 81);" class="border">JUPITER</h1>
-        
+      <h1
+        align="center"
+        style="background-color: rgb(173, 138, 81)"
+        class="border"
+      >
+        JUPITER
+      </h1>
     </header>
 
     <div class="row">
-        <div class="column left">
-            <h2 align="center" style="background-color: rgb(173, 138, 81);" class="border" >INFORMATION<p>
-                Jupiter itself is not likely to have any living organisms, but one of its moons, "Europa" might have life swimming around in beneath its icy surface.<br>
-                <br>Jupiter is a gas giant, and was formed as gasses from the sun's creation collected.<br>
-            </h2>
-        </div>
+      <div class="column left">
+        <h2
+          align="center"
+          style="background-color: rgb(173, 138, 81)"
+          class="border"
+        >
+          INFORMATION
+          <p>
+            Jupiter itself is not likely to have any living organisms, but one
+            of its moons, "Europa" might have life swimming around in beneath
+            its icy surface.<br />
+            <br />Jupiter is a gas giant, and was formed as gasses from the
+            sun's creation collected.<br />
+          </p>
+        </h2>
+      </div>
 
-        <div class="column center">
-            <h2></h2>
-           <img src="moving_jupiter.gif" alt="Jupiter" class="center" width="400" height="400" alt="Rotating Earth" class="rotate-image">
-        </div> 
+      <div class="column center">
+        <h2></h2>
+        <img
+          src="moving_jupiter.gif"
+          alt="Jupiter"
+          class="center"
+          width="400"
+          height="400"
+          alt="Rotating Earth"
+          class="rotate-image"
+        />
+      </div>
 
-        <div class="column right">
-            <h2 align="center" style="background-color: rgb(173, 138, 81);" class="border">FUN FACTS<p>
-                Jupiter is more than twice as massive as all the otehr planets combigned.<br>
-                <br>Jupiter has more than 75 moons.<br>
-                <br>That big red spot on Jupiter's surface is actually one big storm that has been going for more than a century.<br>
-                
-            </p></h2> 
-        </div>
+      <div class="column right">
+        <h2
+          align="center"
+          style="background-color: rgb(173, 138, 81)"
+          class="border"
+        >
+          FUN FACTS
+          <p>
+            Jupiter is more than twice as massive as all the otehr planets
+            combigned.<br />
+            <br />Jupiter has more than 75 moons.<br />
+            <br />That big red spot on Jupiter's surface is actually one big
+            storm that has been going for more than a century.<br />
+          </p>
+        </h2>
+      </div>
     </div>
 
-    <a id="help-button">?</a>
     <a href="../index.html" id="back-button">←</a>
-</body>
-
+  </body>
 </html>
