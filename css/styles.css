@@ -85,12 +85,13 @@ img {
   appearance: none;
   width: 25px; /* Set a specific slider handle width */
   height: 25px; /* Slider handle height */
-  background: rgb(46, 6, 67);
+  background: rgb(111, 40, 149);
+  border-radius: 10px;
   cursor: pointer; /* Cursor on hover */
 }
 
 .slider::-webkit-slider-thumb:hover {
-  background: rgb(66, 26, 87);
+  background: rgb(131, 60, 169);
 }
 
 #back-button {
