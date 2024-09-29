@@ -6,8 +6,8 @@ This page was created for SteelHacks2024 by Ben Rand-Leach (benrandleach@gmail.c
 
 The goal of this page is to educate young people about the solar system and get them excited about space and science.
 
-Some planetary data was sourced from NASA, and the rest was calculated by us
+Some planetary data was sourced from NASA, and the rest was calculated by us.
 
-Images were used from WikiMedia and Vecteezy
+Images were used from WikiMedia and Vecteezy.
 
-Fun facts were sourced from Wikipedia, BBC, NASA, and NatGeo
+Fun facts were sourced from Wikipedia, BBC, NASA, and NatGeo.
