@@ -93,22 +93,3 @@ img {
 .slider::-webkit-slider-thumb:hover {
   background: rgb(131, 60, 169);
 }
-
-#back-button {
-  color: #fff;
-  font-size: 2rem;
-  position: fixed;
-  width: 5rem;
-  height: 5rem;
-  bottom: 2rem;
-  left: 2rem;
-  background-color: rgb(46, 6, 67);
-  border-radius: 5rem;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 5rem;
-}
-
-#back-button:hover {
-  background-color: rgb(66, 26, 87);
-}

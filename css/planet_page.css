@@ -37,25 +37,6 @@ body {
   background-color: rgb(66, 26, 87);
 }
 
-#help-button {
-  color: #fff;
-  font-size: 2rem;
-  position: fixed;
-  width: 5rem;
-  height: 5rem;
-  bottom: 2rem;
-  right: 2rem;
-  background-color: rgb(46, 6, 67);
-  border-radius: 5rem;
-  text-align: center;
-  vertical-align: middle;
-  line-height: 5rem;
-}
-
-#help-button:hover {
-  background-color: rgb(66, 26, 87);
-}
-
 #about-info {
   margin: 50px;
   padding: 20px;
