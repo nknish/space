@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPACE</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+    <header id="noah">Our solar system today</header>
+    
+    <main>
+      <div id="planet-display">
+        <canvas id="canvas" width="1200" height="500"></canvas>
+        <div id="planets">
+          <a href="planets/earth.html" id="earth"><img src="img/earth.png" alt="earth" /></a>
+          <a href="planets/mercury.html" id="mercury"><img src="img/mercury.png" alt="mercury"/></a>
+          <a href="planets/venus.html" id="venus"><img src="img/venus.png" alt="venus" /></a>
+          <a href="planets/mars.html" id="mars"><img src="img/mars.png" alt="mars" /></a>
+          <a href="" id="jupiter"><img src="img/jupiter.png" alt="jupiter"/></a>
+          <a href="" id="saturn"><img src="img/saturn.png" alt="saturn" /></a>
+          <a href="" id="neptune"><img src="img/neptune.png" alt="neptune"/></a>
+          <a href="planets/uranus.html" id="uranus"><img src="img/uranus.png" alt="uranus" /></a>
+          <a href="" id="sun"><img src="img/sun.png" alt="sun" id="sun-image"/></a>
+        </div>
+      </div>
+      <div id="slider-container">
+        <input type="range" min="-7" max="7" value="0" class="slider" id="timeline-slider">
+      </div>
+    </main>
+    <a id="help-button">?</a>
+    <a id="back-button">←</a>
+  </body>
+</html>
