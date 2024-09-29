@@ -8,25 +8,30 @@ header {
   text-align: center;
   color: white;
   font-size: 6rem;
-  padding: 10px;
+  padding: 0px;
 }
 
 main {
-  padding-left: 8%;
-  padding-right: 8%;
+  padding-left: 0%;
+  padding-right: 0%;
 }
 
+#planet-display {
+  width: 100%;
+  height: 100%;
+}
 img {
   width: 50px;
   height: 50px;
 }
 
+#planets {
+  padding-left: 25%;
+}
+
 #sun-image {
-  position: absolute;
   width: 100px;
   height: 100px;
-  left: 680px;
-  top: 350px;
 }
 
 #help-button {
@@ -46,6 +51,45 @@ img {
 
 #help-button:hover {
   background-color: rgb(66, 26, 87);
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+.slidecontainer {
+  width: 60%;
+  padding-left: 20%;
+  padding-right: 20%;
+  padding-bottom: 5%;
+
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #000000;
+  cursor: pointer;
 }
 
 #back-button {
