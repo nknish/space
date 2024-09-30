@@ -80,7 +80,7 @@ function render() {
   const windowW = window.innerWidth;
   const windowH = window.innerHeight;
 
-  canvas.width = "" + windowW * 0.9;
+  canvas.width = "" + windowW * 0.97;
   canvas.height = "" + windowH * 0.55;
 
   const height = canvas.height;
@@ -91,7 +91,8 @@ function render() {
   for (let i = 0; i < 8; i++) {
     drawPlanet(i);
   }
-  drawSun();
+  
+  drawSun()
   updateHeader();
 
   function drawEllipses() {
